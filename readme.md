@@ -382,6 +382,15 @@ it completes. You may need to control memory via
 #### Checking to see if the cluster is up and Kubernetes can talk to it
 
 To interact with Kubernetes, you also need the **kubectl** CLI client. [Installing](https://kubernetes.io/docs/tasks/tools/install-kubectl/) it is easy.
+Minikube ships a kubectl client version that matches the kubernetes version to avoid skew issues. To use the minikube shipped client do one of the following:
+
+All normal kubectl commands should be performed as 
+`minikube kubectl`
+It can be added to aliases by running the following:
+`alias kubectl='minikube kubectl --'`
+
+you can run below commands:
+`minikube kubectl get nodes`
 
 To verify your cluster is working, you can use the **kubectl cluster-info** command shown in the following listing.
 

@@ -361,7 +361,8 @@ A proper Kubernetes install spans multiple physical or virtual machines and requ
 The simplest and quickest path to a fully functioning Kubernetes cluster is by using Minikube. Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
 
 #### Starting a Kubernetes cluster with minikube
-
+[Minikube Installation](https://minikube.sigs.k8s.io/docs/start/)
+Prerequisite : Docker installed already 
 Once you have Minikube installed locally, you can immediately start up the Kubernetes cluster with the following command:
 
 `minikube start`
@@ -374,7 +375,9 @@ Kubectl is now configured to use the cluster.
 ```
 
 Starting the cluster takes more than a minute, so don’t interrupt the command before
-it completes.
+it completes. You may need to control memory via 
+
+`minikube start --memory=1911mb`
 
 #### Checking to see if the cluster is up and Kubernetes can talk to it
 
